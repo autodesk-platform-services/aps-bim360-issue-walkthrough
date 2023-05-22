@@ -1,24 +1,21 @@
 # APS BIM360 Issue API Walkthrough
  
-[![node](https://img.shields.io/badge/nodejs-6.11.1-yellow.svg)](https://nodejs.org)
-[![npm](https://img.shields.io/badge/npm-3.10.10-green.svg)](https://www.npmjs.com/)
-[![visual code](https://img.shields.io/badge/visual%20code-1.28.2-orange.svg)](https://code.visualstudio.com)
+[![NodeJs](https://img.shields.io/badge/nodejs-14.15.4-yellow.svg)](https://nodejs.org)
+[![NPM](https://img.shields.io/badge/npm-6.14.10-green.svg)](https://www.npmjs.com/)
+[![Visual Studio Code](https://img.shields.io/badge/visual%20code-1.78.2-orange.svg)](https://code.visualstudio.com)
 
-[![oAuth2](https://img.shields.io/badge/oAuth2-v1-green.svg)](http://developer.autodesk.com/)
-[![Data-Management](https://img.shields.io/badge/Data%20Management-v1-green.svg)](http://developer.autodesk.com/)
-[![Viewer](https://img.shields.io/badge/Viewer-v6-green.svg)](http://developer.autodesk.com/)
+[![Authentication v2](https://img.shields.io/badge/Authentication-v2-green.svg)](https://aps.autodesk.com/en/docs/oauth/v2/overview/)
+[![Data Management API](https://img.shields.io/badge/Data%20Management-v1-green.svg)](https://aps.autodesk.com/en/docs/data/v2/overview/)
+[![BIM360 Admin API](https://aps.autodesk.com/en/docs/bim360/v1/reference/http/admin-v1-projects-projectId-users-GET/)
+[![Viewer 7](https://img.shields.io/badge/Viewer-v7-green.svg)](https://aps.autodesk.com/en/docs/viewer/v7/overview/)
+[![BIM 360 Issue API v2](https://img.shields.io/badge/BIM%20360%20Issue%20API%20V2-v2-green.svg)](https://aps.autodesk.com/en/docs/bim360/v1/reference/http/issues-v2-users-me-GET/)
 
-[![BIM-360](https://img.shields.io/badge/BIM%20360-v1-green.svg)](http://developer.autodesk.com/)
-[![Design Automation](https://img.shields.io/badge/Design%20Automation-v3-green.svg)](http://developer.autodesk.com/)
-
-[![License](http://img.shields.io/:license-mit-red.svg)](http://opensource.org/licenses/MIT)
-[![Level](https://img.shields.io/badge/Level-Intermediate-blue.svg)](http://developer.autodesk.com/)
+![Intermediate](https://img.shields.io/badge/Level-Intermediate-blue.svg)
 
 
 ## Description
 This repository demonstrates basic usages of BIM 360 Issues API: get some attributes of issues at specific due date, load pushpin issue, create new issue, create new comment, add local file to issue as attachment.
 
- 
 ## Thumbnail
 
 ![thumbnail](/thumbnail.png)  
@@ -58,7 +55,7 @@ In [.env](./env) file, input the information below
 Open the browser: [http://localhost:3000](http://localhost:3000). 
  
 
-## Usages
+## Usage
 
 1. Select one project in the left panel tree.
 2. select one due date on the top of the issue tree. The issues at the specific due date will be listed.
@@ -90,4 +87,4 @@ This sample is licensed under the terms of the [MIT License](http://opensource.o
 
 ## Written by
 
-Xiaodong Liang [Xiaodong Liang @coldwood](https://twitter.com/coldwood). [APS Partner Development](http://aps.autodesk.com)
+[Xiaodong Liang @coldwood](https://twitter.com/coldwood). [APS Partner Development](http://aps.autodesk.com)
