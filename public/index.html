@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://cdn.autodesk.io/favicon.ico">
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-light.min.css">
+    <link rel="stylesheet" href="/main.css">
+    <title>BIM 360 Issue API Walthrough</title>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+<!-- sidebar -->
+<script src="https://unpkg.com/inspire-tree@4.3.1/dist/inspire-tree.js"></script>
+<script src="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-dom.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
+<!-- jstree packages -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.6/jstree.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script src="https://kit.fontawesome.com/0977ffc42e.js" crossorigin="anonymous"></script>
+<script src="/main.js" type="module"></script>
+
+<body>
+    <div id="header">
+        <img class="logo" src="https://cdn.autodesk.io/logo/black/stacked.png" alt="Autodesk Platform Services">
+        <span class="title"><h3>BIM 360 Issue API Walthrough</h3></span>
+        <button id="login" style="visibility: hidden;">Login</button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 withBoard" id="sidebar">
+                Projects List
+                <div id="projectTree" style="overflow:auto;"></div>
+            </div>
+            <div class="col-md-4 withBoard">
+                    <div class="input-group datetimepicker" id="input-due-date">
+                        <span class="input-group-text">Issues Due At</span>
+                        <input class="set-due-date form-control" data-provide="datepicker" id="issueDueDate" placeholder="Select Issue Due Date"/>
+                        <span class="input-group-text" ><i class="fas fa-calendar"></i>
+                        </span>
+                    </div>
+
+                    <div class="row" id="issueTree" style="height:70vh;overflow:auto;">
+                    </div> 
+
+                    <div>
+                        <!-- create new issue -->
+                        <div class="row">
+                            <div class="input-group mb-3">
+                                <button class="btn btn-outline-secondary" type="button" id="btnCreateIssue">Create Issue</button>
+                                <input type="text" class="form-control" placeholder="Issue Title" id="newIssueTitle">
+                                <input class="set-due-date form-control" data-provide="datepicker" id="newIssueDueDate" placeholder="Due Date"/>
+                                <span class="input-group-text" ><i class="fa-light fa-calendar-days"></i></span>
+                                <span> 
+                                    <select class="form-select" id="dropdownIssueTypes">
+                                         <option selected>Select Issue Sub Type</option> 
+                                    </select>   
+                                 </span>                           
+                            </div>
+                        </div>
+                        <!-- create new issue -->
+
+                        <!-- create new comment -->
+                        <div class="row">
+                            <div class="input-group mb-3">
+                                <button class="btn btn-outline-secondary" type="button" id="btnCreateComment">Create Comments</button>
+                                <input type="text" class="form-control" placeholder="input comments" id="newComment">
+                              </div>
+                         </div>
+                        <!-- create new comment -->
+                        <!-- attach image -->
+                        <div class="row">
+                            <div class="input-group mb-3">
+                                 <input type="file" class="form-control" id="selectedFile" aria-label="Upload">
+                              </div>
+                        </div>
+                    </div>
+                
+            </div>
+            <div class="col-md-3"  >
+                <div id="preview"></div>
+               
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
