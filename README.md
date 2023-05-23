@@ -6,9 +6,9 @@
 
 [![Authentication v2](https://img.shields.io/badge/Authentication-v2-green.svg)](https://aps.autodesk.com/en/docs/oauth/v2/overview/)
 [![Data Management API](https://img.shields.io/badge/Data%20Management-v1-green.svg)](https://aps.autodesk.com/en/docs/data/v2/overview/)
-[![BIM360 Admin API]](https://aps.autodesk.com/en/docs/bim360/v1/reference/http/admin-v1-projects-projectId-users-GET/)
+[![BIM360 Admin API](https://img.shields.io/badge/BIM360%20Admin%20API-v1-green.svg)](https://aps.autodesk.com/en/docs/bim360/v1/reference/http/admin-v1-projects-projectId-users-GET/)
 [![Viewer 7](https://img.shields.io/badge/Viewer-v7-green.svg)](https://aps.autodesk.com/en/docs/viewer/v7/overview/)
-[![BIM 360 Issue API v2](https://img.shields.io/badge/BIM%20360%20Issue%20API%20V2-v2-green.svg)](https://aps.autodesk.com/en/docs/bim360/v1/reference/http/issues-v2-users-me-GET/)
+[![BIM 360 Issue API](https://img.shields.io/badge/BIM%20360%20Issue%20API%20V2-v2-green.svg)](https://aps.autodesk.com/en/docs/bim360/v1/reference/http/issues-v2-users-me-GET/)
 
 ![Intermediate](https://img.shields.io/badge/Level-Intermediate-blue.svg)
 
@@ -87,4 +87,4 @@ This sample is licensed under the terms of the [MIT License](http://opensource.o
 
 ## Written by
 
-[Xiaodong Liang @coldwood](https://twitter.com/coldwood). [APS Partner Development](http://aps.autodesk.com)
+Xiaodong Liang [@coldwood](https://twitter.com/coldwood). [APS Partner Development](http://aps.autodesk.com)
